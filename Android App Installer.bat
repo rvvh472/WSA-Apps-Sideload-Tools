@@ -1,7 +1,8 @@
 @echo off
 setlocal enabledelayedexpansion
 if not exist "%~dp0adb.exe" ( echo adb file not found.:- error && pause)
-%~dp0adb.exe connect 127.0.0.1:58526 > nul 
+%~dp0adb.exe connect 127.0.0.1:58526 > nul
+if not exist "%~dp0temp1" (mkdir %~dp0temp1)
 set "temp1=%~dp0temp1\"
 set "sources=%temp1%sources\"
 set  "_Green="0A""
